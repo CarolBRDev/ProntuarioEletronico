@@ -13,7 +13,8 @@ namespace ProntuarioEletronico
     {
         public static void InjeteDependencias()
         {
-            ServiceCollection services = new ServiceCollection();                  services.AddScoped<IPacienteRepositorio, PacienteRepositorio>();
+            ServiceCollection services = new ServiceCollection();
+            services.AddScoped<IPacienteRepositorio, PacienteRepositorio>();
             services.AddScoped<IPacienteService, IPacienteService>();
             
         }
