@@ -16,7 +16,7 @@ namespace ProntuarioEletronico.Infra.Repositorio
         {
             paciente.Id = ultimoId++;
             pacientes.Add(paciente);
-            Console.WriteLine($"Paciente {paciente.Nome} cadastrado com sucesso!");
+            Console.WriteLine($"Paciente cadastrado com sucesso!");
         }
 
         public void DeletaPacienteId(int id)
@@ -26,7 +26,7 @@ namespace ProntuarioEletronico.Infra.Repositorio
             //se nao existe = nao existente
             if (pacienteParaDeletar == null)
             {
-                Console.WriteLine("Nenhum paciente com esse Id.");
+                Console.WriteLine("Não encontrado um paciente com esse Id");
             }
             else
             {//se existe = deletar
@@ -36,7 +36,7 @@ namespace ProntuarioEletronico.Infra.Repositorio
             
         }
 
-        public List<Paciente> ListarPacientes()
+        public List<Paciente> ListaPacientes()
         {
             return pacientes;
         }
@@ -64,6 +64,7 @@ namespace ProntuarioEletronico.Infra.Repositorio
             {
                 pacienteParaAtualizar.Nome = pacienteAtualizado.Nome;                               
                 pacienteParaAtualizar.DataNascimento = pacienteAtualizado.DataNascimento;
+                Console.WriteLine("Paciente atualizado com sucesso!");
             }
         }
     }

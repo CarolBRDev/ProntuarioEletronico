@@ -7,7 +7,7 @@ namespace ProntuarioEletronico.Dominio.Entidades
         public int Id { get; set; }
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
-        public DateTime DataCadastro { get; set; }
+        public DateTime DataCadastro { get; private set; }
 
         public Paciente(string nome, DateTime dataNascimento)
         {
@@ -16,7 +16,11 @@ namespace ProntuarioEletronico.Dominio.Entidades
             DataCadastro = DateTime.Now;
         }
        
-
+        //construtor para poder atualizar o paciente sem modificar a data de cadastro
+        public Paciente (int id, string nome, DateTime dataNascimento) : this(nome, dataNascimento)
+        {
+            Id = id;            
+        }
 
 
 
