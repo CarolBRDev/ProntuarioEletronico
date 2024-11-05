@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ProntuarioEletronico.Dominio.Contratos.Services;
+﻿using ProntuarioEletronico.Dominio.Contratos.Services;
 
 namespace ProntuarioEletronico.Service
 {

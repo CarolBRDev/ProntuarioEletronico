@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ProntuarioEletronico
+﻿namespace ProntuarioEletronico
 {
     internal class Program
     {
