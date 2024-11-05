@@ -10,11 +10,13 @@ namespace ProntuarioEletronico.Infra.Repositorio
     {
         //inicia a lista de pacientes
         private static List<Paciente> pacientes = new List<Paciente>();
+
         //inicia o contador do Id (Será automatico)
         private static int ultimoId = 0;
+
         public void CadastraPaciente(Paciente paciente)
         {
-            paciente.Id = ultimoId++;
+            paciente.Id = ++ultimoId;
             pacientes.Add(paciente);
             Console.WriteLine($"Paciente cadastrado com sucesso!");
         }
@@ -23,6 +25,7 @@ namespace ProntuarioEletronico.Infra.Repositorio
         {
             //buscar paciente 
            Paciente pacienteParaDeletar = BuscaPorId(id);
+
             //se nao existe = nao existente
             if (pacienteParaDeletar == null)
             {
